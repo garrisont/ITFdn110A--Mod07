@@ -38,7 +38,7 @@ print("Unpickled values are:", results)
 
 Results:
 
-![some alt text](https://github.com/garrisont/ITFdn110A--Mod07/blob/53361071cfd2b71394f2f2036c82431da9495ba3/docs/initial%20pickle%20test.png?raw=true "Some tool tip text")
+![Results](https://github.com/garrisont/ITFdn110A--Mod07/blob/53361071cfd2b71394f2f2036c82431da9495ba3/docs/initial%20pickle%20test.png?raw=true "Raw text and un-pickled results")
 
 ### Pickling Multiple Entries 
 In the process of experimenting with pickling I realized that the pickle.dump and pickle.load commands work like the .write() and .readline() methods.  That is to say that pickle.dump will add/append serialized data to a file. 
@@ -149,3 +149,24 @@ if fltCost.isnumeric() != True: # Logic statements can be used for simple error 
     raise Exception("Cost must be numeric") # Raise exception can be used to close a script
 ```
 ## Assigned Script - Summary
+I felt that a simple linear (no functions) script would be most useful to beginners (future me).  With that in mind I opted to not build upon assignment 06, instead I started over with a simpler script that did the following:
+
+Assignment psuedocode
+```
+# >>>> Error Handling (1) - Try/Except for file opening <<<<
+
+# Prompt user for more data to pickle
+
+# >>>> Error Handling (2) - Validate user input <<<<
+
+# >>>> Pickle Example (2) - Pickle data to file <<<<
+
+# >>>> Pickle Example (3) - Show pickled and un-pickled list <<<<
+```
+
+
+![PyCharm](https://github.com/garrisont/ITFdn110A--Mod07/blob/main/docs/pycharm%20results.png "PyCharm results")
+
+
+![CommandLine](https://github.com/garrisont/ITFdn110A--Mod07/blob/main/docs/command%20line%20results.png "Command line results")
+
