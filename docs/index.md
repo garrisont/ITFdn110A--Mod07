@@ -251,4 +251,3 @@ input("(Press Enter to exit)")
 
 
 ![CommandLine](https://github.com/garrisont/ITFdn110A--Mod07/blob/fe1c36e93d85341e7888750fd08a9831752005ec/docs/command%20line%20results.png "Command line results")
-
