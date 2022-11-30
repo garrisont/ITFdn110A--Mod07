@@ -106,6 +106,46 @@ Looped pickle.load() results:
 ```
 
 
-## Topic 1
-### Subtopic
-## Summary
+## Error Handling – Further (web) Research
+
+### Try / Except / Else / Finally  
+The most intuitive example I came accross for try/except was on w3schools:
+https://www.w3schools.com/python/python_try_except.asp (visited on: 2022-11-28)
+Based on the above site and the lecture it appears that for the purposes of this assignment the try/except/else/finally logic will handle most of what I need to do. 
+
+```
+try: # Script will execute this block and check for exceptions
+    objF = open(strFile, "rb") # Attempt to open the file
+
+except FileNotFoundError: # Take specific action for file not found exception
+    print("{} not found, new file created!".format(strFile))
+    objF = open(strFile, 'wb') # Create the file
+    objF.close() # Close the file
+
+else: # The else block will only be run if the try succeeded
+    # >>>> Pickle Example (1) - Loading pickled data <<<<
+    lstData = pickle.load(objF) # The .load() method converts pickle data to plain text
+    objF.close()
+    # NOTE: In this case the above lines of code could/should
+    #       have been placed in the "try" block.  They were
+    #       placed here to demonstrate the "else" block.
+
+finally: # The finally block will always be run
+    print("Current un-pickled values are:\n", lstData) # Finally block will be printed no matter what
+```
+One very important point for self learning is that the following except block can be used to get the exception details.  This can help when trying to handle specific exceptions.  (see "Pickling multiple objects" section)
+```
+except Exception as e:  # Any other excpetion will be caught here
+    print("There was a non-specific error!")
+    print("Built-In Python error info: ")
+    print(e, e.__doc__, type(e), sep='\n')  # Print the exception name, documentation and type
+```
+
+### Raise Exception
+I also added an example of using raise Exception to exit the script when incompatible data was added
+```
+if fltCost.isnumeric() != True: # Logic statements can be used for simple error handling
+    input("Invalid cost entry, press any key to exit") # Inputs can be used to pass on a last user message
+    raise Exception("Cost must be numeric") # Raise exception can be used to close a script
+```
+## Assigned Script - Summary
